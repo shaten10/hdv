@@ -5,6 +5,9 @@
  */
 package vista;
 
+import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author Equipo
@@ -17,6 +20,11 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
+        ((DefaultTableCellRenderer) tablaEmpleados.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
+        DefaultTableCellRenderer rendar = new DefaultTableCellRenderer();
+        rendar.setHorizontalAlignment(jLabel1.CENTER);
+        tablaEmpleados.getColumnModel().getColumn(0).setCellRenderer(rendar);
+        
     }
 
     /**
@@ -33,25 +41,27 @@ public class Main extends javax.swing.JFrame {
         lblBuscar = new javax.swing.JLabel();
         panelTxtBuscar = new javax.swing.JPanel();
         txtBuscar = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnMainNuevo = new javax.swing.JButton();
+        btnMainVer = new javax.swing.JButton();
+        btnMainEditar = new javax.swing.JButton();
+        btnMainEliminar = new javax.swing.JButton();
+        scrollTabla = new javax.swing.JScrollPane();
+        tablaEmpleados = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestor Empleados");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(251, 250, 253));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("Lista de Empleados");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 136, 27));
 
         lblBuscar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        lblBuscar.setForeground(new java.awt.Color(102, 102, 102));
+        lblBuscar.setForeground(new java.awt.Color(51, 51, 51));
         lblBuscar.setText("Buscar");
         lblBuscar.setToolTipText("");
         jPanel1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 35, -1, -1));
@@ -65,29 +75,67 @@ public class Main extends javax.swing.JFrame {
         txtBuscar.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtBuscar.setToolTipText("");
         txtBuscar.setBorder(null);
-        panelTxtBuscar.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 1, 140, 28));
+        panelTxtBuscar.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 1, 140, 20));
 
-        jPanel1.add(panelTxtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 150, 30));
+        jPanel1.add(panelTxtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 150, 25));
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton1.setText("Nuevo");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 40));
+        btnMainNuevo.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainNuevo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainNuevo.setText("Nuevo");
+        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 40));
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton2.setText("Ver");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, 90, 40));
+        btnMainVer.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainVer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainVer.setText("Ver");
+        jPanel1.add(btnMainVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, 90, 40));
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 204));
-        jButton3.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton3.setText("Editar");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 90, 40));
+        btnMainEditar.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainEditar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainEditar.setText("Editar");
+        jPanel1.add(btnMainEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 90, 40));
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton4.setText("Eliminar");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 40));
+        btnMainEliminar.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainEliminar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainEliminar.setText("Eliminar");
+        jPanel1.add(btnMainEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 40));
+
+        tablaEmpleados.setAutoCreateRowSorter(true);
+        tablaEmpleados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nº Documento", "Nombre Completo", "Dirección", "Telefono"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaEmpleados.setRowHeight(25);
+        tablaEmpleados.setSelectionBackground(new java.awt.Color(59, 105, 165));
+        tablaEmpleados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablaEmpleados.setShowVerticalLines(false);
+        scrollTabla.setViewportView(tablaEmpleados);
+        if (tablaEmpleados.getColumnModel().getColumnCount() > 0) {
+            tablaEmpleados.getColumnModel().getColumn(0).setMinWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tablaEmpleados.getColumnModel().getColumn(0).setMaxWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(3).setMinWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(3).setPreferredWidth(50);
+            tablaEmpleados.getColumnModel().getColumn(3).setMaxWidth(150);
+        }
+
+        jPanel1.add(scrollTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 77, 860, 390));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 550));
 
@@ -130,14 +178,16 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnMainEditar;
+    private javax.swing.JButton btnMainEliminar;
+    private javax.swing.JButton btnMainNuevo;
+    private javax.swing.JButton btnMainVer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblBuscar;
     private javax.swing.JPanel panelTxtBuscar;
+    private javax.swing.JScrollPane scrollTabla;
+    private javax.swing.JTable tablaEmpleados;
     private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }

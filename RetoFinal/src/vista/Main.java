@@ -82,22 +82,22 @@ public class Main extends javax.swing.JFrame {
         btnMainNuevo.setBackground(new java.awt.Color(204, 204, 204));
         btnMainNuevo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         btnMainNuevo.setText("Nuevo");
-        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 40));
+        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 35));
 
         btnMainVer.setBackground(new java.awt.Color(204, 204, 204));
         btnMainVer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         btnMainVer.setText("Ver");
-        jPanel1.add(btnMainVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, 90, 40));
+        jPanel1.add(btnMainVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, 90, 35));
 
         btnMainEditar.setBackground(new java.awt.Color(204, 204, 204));
         btnMainEditar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         btnMainEditar.setText("Editar");
-        jPanel1.add(btnMainEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 90, 40));
+        jPanel1.add(btnMainEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 90, 35));
 
         btnMainEliminar.setBackground(new java.awt.Color(204, 204, 204));
         btnMainEliminar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         btnMainEliminar.setText("Eliminar");
-        jPanel1.add(btnMainEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 40));
+        jPanel1.add(btnMainEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 35));
 
         tablaEmpleados.setAutoCreateRowSorter(true);
         tablaEmpleados.setModel(new javax.swing.table.DefaultTableModel(

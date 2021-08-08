@@ -32,6 +32,7 @@ public class Main extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,6 +47,9 @@ public class Main extends javax.swing.JFrame {
 
         jButton4.setText("Entrar");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setText("HOLA MUNDO");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,11 +63,14 @@ public class Main extends javax.swing.JFrame {
                         .addGap(106, 106, 106)
                         .addComponent(jButton1)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton2)
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton4)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton3)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addGap(29, 29, 29)
+                                .addComponent(jButton4)
+                                .addGap(34, 34, 34)
+                                .addComponent(jButton3)))))
                 .addContainerGap(153, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -77,7 +84,9 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addGap(84, 84, 84)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         pack();
@@ -124,5 +133,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

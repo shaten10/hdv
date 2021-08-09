@@ -5,6 +5,8 @@
  */
 package vista;
 
+import java.awt.Color;
+import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableCellRenderer;
 
@@ -20,11 +22,17 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         this.setLocationRelativeTo(null);
-        ((DefaultTableCellRenderer) tablaEmpleados.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
-        DefaultTableCellRenderer rendar = new DefaultTableCellRenderer();
-        rendar.setHorizontalAlignment(jLabel1.CENTER);
-        tablaEmpleados.getColumnModel().getColumn(0).setCellRenderer(rendar);
-        
+        /*((DefaultTableCellRenderer) tablaEmpleados.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
+        DefaultTableCellRenderer cent = new DefaultTableCellRenderer();
+        cent.setHorizontalAlignment(jLabel1.CENTER);
+        tablaEmpleados.getColumnModel().getColumn(0).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(1).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(2).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(3).setCellRenderer(cent); */   
+        tablaEmpleados.getTableHeader().setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        tablaEmpleados.getTableHeader().setOpaque(false);
+        tablaEmpleados.getTableHeader().setBackground(new Color(32,136,203));
+        tablaEmpleados.getTableHeader().setForeground(new Color(51,51,51));
     }
 
     /**
@@ -49,7 +57,7 @@ public class Main extends javax.swing.JFrame {
         tablaEmpleados = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestor Empleados");
+        setTitle("Gestor de Empleados");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(251, 250, 253));
@@ -64,20 +72,20 @@ public class Main extends javax.swing.JFrame {
         lblBuscar.setForeground(new java.awt.Color(51, 51, 51));
         lblBuscar.setText("Buscar");
         lblBuscar.setToolTipText("");
-        jPanel1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 35, -1, -1));
+        jPanel1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 32, -1, -1));
 
         panelTxtBuscar.setBackground(new java.awt.Color(255, 255, 255));
         panelTxtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         panelTxtBuscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtBuscar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        txtBuscar.setForeground(new java.awt.Color(102, 102, 102));
+        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
         txtBuscar.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtBuscar.setToolTipText("");
         txtBuscar.setBorder(null);
         panelTxtBuscar.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 1, 140, 20));
 
-        jPanel1.add(panelTxtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 150, 25));
+        jPanel1.add(panelTxtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 150, 22));
 
         btnMainNuevo.setBackground(new java.awt.Color(204, 204, 204));
         btnMainNuevo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -99,18 +107,23 @@ public class Main extends javax.swing.JFrame {
         btnMainEliminar.setText("Eliminar");
         jPanel1.add(btnMainEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 35));
 
+        scrollTabla.setBackground(new java.awt.Color(251, 250, 253));
+        scrollTabla.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollTabla.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
         tablaEmpleados.setAutoCreateRowSorter(true);
+        tablaEmpleados.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         tablaEmpleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
+                {"10526589745", "Pepito Perez Pereiraa", "Calle 45 #45-56", "6012354842"},
+                {"10526589744", "Juanito Juarez", "Calle 45 #45-56", "6045678942"},
+                {"10526589746", "Pablito Perdomo Pereira", "Calle 45 #45-56", "6012345678"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Nº Documento", "Nombre Completo", "Dirección", "Telefono"
+                "Documento", "Nombre Completo", "Dirección", "Telefono"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -121,10 +134,14 @@ public class Main extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tablaEmpleados.setFocusable(false);
+        tablaEmpleados.setGridColor(new java.awt.Color(230, 232, 240));
+        tablaEmpleados.setIntercellSpacing(new java.awt.Dimension(0, 0));
         tablaEmpleados.setRowHeight(25);
         tablaEmpleados.setSelectionBackground(new java.awt.Color(59, 105, 165));
         tablaEmpleados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         tablaEmpleados.setShowVerticalLines(false);
+        tablaEmpleados.getTableHeader().setReorderingAllowed(false);
         scrollTabla.setViewportView(tablaEmpleados);
         if (tablaEmpleados.getColumnModel().getColumnCount() > 0) {
             tablaEmpleados.getColumnModel().getColumn(0).setMinWidth(150);

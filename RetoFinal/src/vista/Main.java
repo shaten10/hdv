@@ -5,6 +5,11 @@
  */
 package vista;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.table.DefaultTableCellRenderer;
+
 /**
  *
  * @author Equipo
@@ -16,6 +21,18 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        /*((DefaultTableCellRenderer) tablaEmpleados.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
+        DefaultTableCellRenderer cent = new DefaultTableCellRenderer();
+        cent.setHorizontalAlignment(jLabel1.CENTER);
+        tablaEmpleados.getColumnModel().getColumn(0).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(1).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(2).setCellRenderer(cent);
+        tablaEmpleados.getColumnModel().getColumn(3).setCellRenderer(cent); */   
+        tablaEmpleados.getTableHeader().setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        tablaEmpleados.getTableHeader().setOpaque(false);
+        tablaEmpleados.getTableHeader().setBackground(new Color(32,136,203));
+        tablaEmpleados.getTableHeader().setForeground(new Color(51,51,51));
     }
 
     /**
@@ -27,67 +44,117 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        lblBuscar = new javax.swing.JLabel();
+        panelTxtBuscar = new javax.swing.JPanel();
+        txtBuscar = new javax.swing.JTextField();
+        btnMainNuevo = new javax.swing.JButton();
+        btnMainVer = new javax.swing.JButton();
+        btnMainEditar = new javax.swing.JButton();
+        btnMainEliminar = new javax.swing.JButton();
+        scrollTabla = new javax.swing.JScrollPane();
+        tablaEmpleados = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestor de Empleados");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Menu Pricipal");
+        jPanel1.setBackground(new java.awt.Color(251, 250, 253));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Entrar");
+        jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Lista de Empleados");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 136, 27));
 
-        jButton2.setText("Entrar");
+        lblBuscar.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        lblBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        lblBuscar.setText("Buscar");
+        lblBuscar.setToolTipText("");
+        jPanel1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 32, -1, -1));
 
-        jButton3.setText("Entrar");
+        panelTxtBuscar.setBackground(new java.awt.Color(255, 255, 255));
+        panelTxtBuscar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        panelTxtBuscar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setText("Entrar");
+        txtBuscar.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
+        txtBuscar.setForeground(new java.awt.Color(51, 51, 51));
+        txtBuscar.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtBuscar.setToolTipText("");
+        txtBuscar.setBorder(null);
+        panelTxtBuscar.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 1, 140, 20));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("HOLA MUNDO");
+        jPanel1.add(panelTxtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 30, 150, 22));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jButton1)
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addGap(29, 29, 29)
-                                .addComponent(jButton4)
-                                .addGap(34, 34, 34)
-                                .addComponent(jButton3)))))
-                .addContainerGap(153, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(84, 84, 84)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
-        );
+        btnMainNuevo.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainNuevo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainNuevo.setText("Nuevo");
+        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 35));
+
+        btnMainVer.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainVer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainVer.setText("Ver");
+        jPanel1.add(btnMainVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 490, 90, 35));
+
+        btnMainEditar.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainEditar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainEditar.setText("Editar");
+        jPanel1.add(btnMainEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 90, 35));
+
+        btnMainEliminar.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainEliminar.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainEliminar.setText("Eliminar");
+        jPanel1.add(btnMainEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 490, 90, 35));
+
+        scrollTabla.setBackground(new java.awt.Color(251, 250, 253));
+        scrollTabla.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollTabla.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+
+        tablaEmpleados.setAutoCreateRowSorter(true);
+        tablaEmpleados.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablaEmpleados.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"10526589745", "Pepito Perez Pereiraa", "Calle 45 #45-56", "6012354842"},
+                {"10526589744", "Juanito Juarez", "Calle 45 #45-56", "6045678942"},
+                {"10526589746", "Pablito Perdomo Pereira", "Calle 45 #45-56", "6012345678"},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Documento", "Nombre Completo", "Dirección", "Telefono"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaEmpleados.setFocusable(false);
+        tablaEmpleados.setGridColor(new java.awt.Color(230, 232, 240));
+        tablaEmpleados.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        tablaEmpleados.setRowHeight(25);
+        tablaEmpleados.setSelectionBackground(new java.awt.Color(59, 105, 165));
+        tablaEmpleados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tablaEmpleados.setShowVerticalLines(false);
+        tablaEmpleados.getTableHeader().setReorderingAllowed(false);
+        scrollTabla.setViewportView(tablaEmpleados);
+        if (tablaEmpleados.getColumnModel().getColumnCount() > 0) {
+            tablaEmpleados.getColumnModel().getColumn(0).setMinWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tablaEmpleados.getColumnModel().getColumn(0).setMaxWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(3).setMinWidth(150);
+            tablaEmpleados.getColumnModel().getColumn(3).setPreferredWidth(50);
+            tablaEmpleados.getColumnModel().getColumn(3).setMaxWidth(150);
+        }
+
+        jPanel1.add(scrollTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 77, 860, 390));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,11 +195,16 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnMainEditar;
+    private javax.swing.JButton btnMainEliminar;
+    private javax.swing.JButton btnMainNuevo;
+    private javax.swing.JButton btnMainVer;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblBuscar;
+    private javax.swing.JPanel panelTxtBuscar;
+    private javax.swing.JScrollPane scrollTabla;
+    private javax.swing.JTable tablaEmpleados;
+    private javax.swing.JTextField txtBuscar;
     // End of variables declaration//GEN-END:variables
 }

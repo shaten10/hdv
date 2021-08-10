@@ -55,6 +55,7 @@ public class Main extends javax.swing.JFrame {
         btnMainEliminar = new javax.swing.JButton();
         scrollTabla = new javax.swing.JScrollPane();
         tablaEmpleados = new javax.swing.JTable();
+        btnMainNuevo1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestor de Empleados");
@@ -90,7 +91,7 @@ public class Main extends javax.swing.JFrame {
         btnMainNuevo.setBackground(new java.awt.Color(204, 204, 204));
         btnMainNuevo.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         btnMainNuevo.setText("Nuevo");
-        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 90, 35));
+        jPanel1.add(btnMainNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 90, 35));
 
         btnMainVer.setBackground(new java.awt.Color(204, 204, 204));
         btnMainVer.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -154,10 +155,24 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.add(scrollTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 77, 860, 390));
 
+        btnMainNuevo1.setBackground(new java.awt.Color(204, 204, 204));
+        btnMainNuevo1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        btnMainNuevo1.setText("Configuración");
+        btnMainNuevo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnMainNuevo1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(btnMainNuevo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 120, 35));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMainNuevo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMainNuevo1MouseClicked
+        
+    }//GEN-LAST:event_btnMainNuevo1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -198,6 +213,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnMainEditar;
     private javax.swing.JButton btnMainEliminar;
     private javax.swing.JButton btnMainNuevo;
+    private javax.swing.JButton btnMainNuevo1;
     private javax.swing.JButton btnMainVer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

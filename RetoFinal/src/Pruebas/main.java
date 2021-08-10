@@ -1,6 +1,6 @@
 package Pruebas;
 
-import controlador.ModeloCiudad;
+import modelo.ModeloCiudad;
 
 public class main {      
     

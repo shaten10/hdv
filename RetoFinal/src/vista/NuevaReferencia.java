@@ -59,7 +59,7 @@ public class NuevaReferencia extends javax.swing.JFrame {
         setTitle("Nueva Referencia");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(251, 250, 253));
+        jPanel1.setBackground(new java.awt.Color(243, 245, 248));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N

@@ -61,7 +61,7 @@ public class Main extends javax.swing.JFrame {
         setTitle("Gestor de Empleados");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(251, 250, 253));
+        jPanel1.setBackground(new java.awt.Color(243, 245, 248));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N

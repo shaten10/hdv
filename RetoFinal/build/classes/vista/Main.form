@@ -29,7 +29,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="fd" green="fa" red="fb" type="rgb"/>
+          <Color blue="f8" green="f5" red="f3" type="rgb"/>
         </Property>
       </Properties>
       <Constraints>

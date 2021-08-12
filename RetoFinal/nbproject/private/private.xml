@@ -3,12 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/controlador/Conexion.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/Pruebas/main.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/vista/AdminCiudades.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/vista/Main.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/vista/NuevaReferencia.java</file>
-            <file>file:/C:/Users/Equipo/Desktop/hdv/RetoFinal/src/controlador/ModeloCiudad.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/Pruebas/main.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Ciudad.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/vista/Main.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/TipoDocumento.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Empleado.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/modelo/ModeloTipoDocumento.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/TipoReferencia.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Referencias.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Empresa.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/modelo/ModeloTipoReferencia.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/modelo/ModeloCiudad.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Persona.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/modelo/ModeloGenero.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/EstadoCivil.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Genero.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/modelo/ModeloEstadoCivil.java</file>
+            <file>file:/C:/Users/Howl/Desktop/hdv/RetoFinal/src/clases/Referente.java</file>
         </group>
     </open-files>
 </project-private>

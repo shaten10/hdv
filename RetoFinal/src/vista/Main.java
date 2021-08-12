@@ -9,19 +9,22 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.table.DefaultTableCellRenderer;
+import clases.*;
 
 /**
  *
  * @author Equipo
  */
 public class Main extends javax.swing.JFrame {
-
+    Empresa emp;
     /**
      * Creates new form Main
      */
     public Main() {
+        emp = new Empresa();
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle(emp.getNombre());
         /*((DefaultTableCellRenderer) tablaEmpleados.getTableHeader().getDefaultRenderer()).setHorizontalAlignment(JLabel.CENTER);
         DefaultTableCellRenderer cent = new DefaultTableCellRenderer();
         cent.setHorizontalAlignment(jLabel1.CENTER);
